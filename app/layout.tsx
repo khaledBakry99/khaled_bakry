@@ -53,11 +53,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased bg-gradient-to-br from-slate-900 via-blue-900/50 to-cyan-900/60 text-slate-200 transition-all duration-500`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased 
+        bg-gradient-to-br from-slate-900 via-blue-900/50 to-cyan-900/60 dark:from-slate-900 dark:via-blue-900/50 dark:to-cyan-900/60
+        light:bg-gradient-to-br light:from-slate-50 light:via-blue-50 light:to-cyan-50
+        text-slate-200 dark:text-slate-200 light:text-slate-900
+        transition-all duration-500`}
+        suppressHydrationWarning
       >
-        <div className={`fixed inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23334155" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] pointer-events-none`}></div>
+        <div className={`fixed inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23334155" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] pointer-events-none opacity-100 dark:opacity-100 light:opacity-30`}></div>
 
         <ScrollProgress />
         <Header />

@@ -33,3 +33,75 @@
 .animate-slideInLeft {
   animation: slideInLeft 0.7s ease-out;
 }
+
+/* Animation Delay Classes */
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Light Mode & Dark Mode Styles */
+@layer base {
+  /* Default (Dark Mode) */
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+
+  /* Light Mode */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  /* Dark Mode */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+/* Light Mode Specific Styles */
+.light {
+  /* Background */
+  background: linear-gradient(to bottom right, 
+    rgb(248, 250, 252), 
+    rgb(219, 234, 254), 
+    rgb(191, 219, 254)
+  );
+}
+
+.light * {
+  /* Text Colors */
+  --tw-text-opacity: 1;
+}
+
+/* Dark Mode Specific Styles */
+.dark {
+  background: linear-gradient(to bottom right,
+    rgb(15, 23, 42),
+    rgb(30, 58, 138, 0.5),
+    rgb(8, 47, 73, 0.6)
+  );
+}

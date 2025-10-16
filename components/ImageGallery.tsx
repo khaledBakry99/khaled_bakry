@@ -47,10 +47,12 @@ export default function ImageGallery({ images, projectName }: ImageGalleryProps)
                   : 'animate-slideInLeft'
               }`}
             >
-              <img
+              <Image
                 src={images[currentIndex]}
                 alt={`${projectName} - Image ${currentIndex + 1}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
               />
               
               {/* Gradient Overlay */}
@@ -102,10 +104,12 @@ export default function ImageGallery({ images, projectName }: ImageGalleryProps)
                   : 'ring-2 ring-slate-300 dark:ring-slate-700 hover:ring-blue-400 hover:scale-105'
               }`}
             >
-              <img
+              <Image
                 src={image}
                 alt={`Thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="100px"
               />
               {index === currentIndex && (
                 <div className="absolute inset-0 bg-blue-500/20" />
@@ -129,10 +133,12 @@ export default function ImageGallery({ images, projectName }: ImageGalleryProps)
 
           {/* Fullscreen Image */}
           <div className="relative w-full h-full flex items-center justify-center">
-            <img
+            <Image
               src={images[currentIndex]}
               alt={`${projectName} - Image ${currentIndex + 1}`}
-              className="max-w-full max-h-full object-contain"
+              fill
+              className="object-contain"
+              sizes="100vw"
             />
 
             {/* Navigation in Fullscreen */}

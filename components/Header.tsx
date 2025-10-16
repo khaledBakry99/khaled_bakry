@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,13 +30,23 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900/95 via-blue-900/95 to-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 shadow-lg shadow-blue-900/30 transition-all duration-500">
+    <header className="fixed top-0 left-0 right-0 z-50 
+      bg-gradient-to-r from-white/95 via-blue-50/95 to-white/95
+      dark:from-slate-900/95 dark:via-blue-900/95 dark:to-slate-900/95
+      backdrop-blur-xl 
+      border-b border-blue-300/30 dark:border-blue-500/20
+      shadow-lg shadow-blue-200/20 dark:shadow-blue-900/30
+      transition-all duration-500">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 rounded-xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-300 animate-gradient-x"></div>
-              <div className="relative w-12 h-12 bg-gradient-to-br from-blue-800/90 via-cyan-800/90 to-blue-900/90 backdrop-blur-xl rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl border border-blue-500/30">
+              <div className="relative w-12 h-12 
+                bg-gradient-to-br from-blue-100 via-cyan-100 to-blue-200
+                dark:from-blue-800/90 dark:via-cyan-800/90 dark:to-blue-900/90
+                backdrop-blur-xl rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl 
+                border border-blue-400/50 dark:border-blue-500/30">
                 <div className="text-center">
                   <div className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 font-bold text-lg leading-none animate-gradient-x">KB</div>
                   <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
@@ -46,11 +57,19 @@ export default function Header() {
             </div>
             <div className="hidden md:block">
               <div className="text-xl font-black tracking-wide">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-gradient-x">KHALED</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r 
+                  from-blue-600 via-cyan-600 to-purple-600
+                  dark:from-blue-400 dark:via-cyan-400 dark:to-purple-400
+                  animate-gradient-x">KHALED</span>
                 {' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 animate-gradient-x">BAKRY</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r 
+                  from-purple-600 via-pink-600 to-orange-600
+                  dark:from-purple-400 dark:via-pink-400 dark:to-orange-400
+                  animate-gradient-x">BAKRY</span>
               </div>
-              <div className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <div className="text-sm text-transparent bg-clip-text bg-gradient-to-r 
+                from-blue-600 to-purple-600
+                dark:from-blue-400 dark:to-purple-400">
                 Frontend Developer
               </div>
             </div>
@@ -63,8 +82,8 @@ export default function Header() {
                 href={item.href}
                 className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium ${
                   pathname === item.href
-                    ? 'text-white bg-blue-800/60 backdrop-blur-sm shadow-lg border border-blue-500/30'
-                    : 'text-blue-200 hover:text-white hover:bg-blue-800/40 backdrop-blur-sm'
+                    ? 'text-blue-900 dark:text-white bg-blue-200/60 dark:bg-blue-800/60 backdrop-blur-sm shadow-lg border border-blue-400/40 dark:border-blue-500/30'
+                    : 'text-blue-700 dark:text-blue-200 hover:text-blue-900 dark:hover:text-white hover:bg-blue-100/60 dark:hover:bg-blue-800/40 backdrop-blur-sm'
                 }`}
               >
                 {item.label}
@@ -76,18 +95,32 @@ export default function Header() {
           </div>
 
           <div className="flex items-center space-x-4">
+            {/* Theme Switcher */}
+            <ThemeSwitcher />
+            
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-blue-800/60 backdrop-blur-lg hover:bg-blue-700/60 transition-all duration-300 border border-blue-600/50"
+              className="lg:hidden p-2 rounded-lg 
+                bg-blue-100/80 dark:bg-blue-800/60
+                backdrop-blur-lg 
+                hover:bg-blue-200/80 dark:hover:bg-blue-700/60
+                transition-all duration-300 
+                border border-blue-400/60 dark:border-blue-600/50"
               aria-label="Toggle menu"
             >
-              <i className={`ri-${isMenuOpen ? 'close' : 'menu'}-line text-xl text-blue-200`}></i>
+              <i className={`ri-${isMenuOpen ? 'close' : 'menu'}-line text-xl 
+                text-blue-700 dark:text-blue-200`}></i>
             </button>
           </div>
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 p-4 bg-slate-900/95 backdrop-blur-xl rounded-xl border border-blue-500/30 shadow-2xl shadow-blue-900/50">
+          <div className="lg:hidden mt-4 p-4 
+            bg-white/95 dark:bg-slate-900/95
+            backdrop-blur-xl rounded-xl 
+            border border-blue-300/40 dark:border-blue-500/30
+            shadow-2xl shadow-blue-200/30 dark:shadow-blue-900/50">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <Link
@@ -96,8 +129,8 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
                     pathname === item.href
-                      ? 'text-white bg-blue-700/60 border border-blue-500/30'
-                      : 'text-blue-200 hover:text-white hover:bg-blue-700/40'
+                      ? 'text-blue-900 dark:text-white bg-blue-200/70 dark:bg-blue-700/60 border border-blue-400/50 dark:border-blue-500/30'
+                      : 'text-blue-700 dark:text-blue-200 hover:text-blue-900 dark:hover:text-white hover:bg-blue-100/60 dark:hover:bg-blue-700/40'
                   }`}
                 >
                   {item.label}

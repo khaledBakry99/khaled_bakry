@@ -1,4 +1,5 @@
 
+import Image from 'next/image';
 import ScrollAnimation from '@/components/ScrollAnimations';
 
 export default function About() {
@@ -60,9 +61,11 @@ export default function About() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-blue-100/10 shadow-2xl">
-                <img 
+                <Image 
                   src="https://readdy.ai/api/search-image?query=Professional%20software%20developer%20working%20on%20modern%20computer%20setup%20with%20multiple%20monitors%2C%20clean%20workspace%2C%20coding%20environment%2C%20modern%20office%20lighting%2C%20professional%20atmosphere%2C%20high-tech%20workspace%2C%20minimalist%20design%2C%20blue%20and%20purple%20ambient%20lighting&width=500&height=600&seq=about-developer&orientation=portrait"
                   alt="Developer workspace"
+                  width={500}
+                  height={600}
                   className="w-full h-96 object-cover object-top rounded-2xl mb-6"
                 />
                 

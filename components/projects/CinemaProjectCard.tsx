@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function CinemaProjectCard() {
   return (
@@ -9,10 +10,13 @@ export default function CinemaProjectCard() {
       <div className="relative m-[3px] bg-white dark:bg-slate-800 rounded-3xl overflow-hidden">
         {/* Image Container with Overlay */}
         <div className="relative overflow-hidden">
-          <img
+          <Image
             src="/images/Cinema Management/1.png"
             alt="Cinema Management & Booking System"
+            width={800}
+            height={600}
             className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+            priority
           />
           
           {/* Gradient Overlay */}

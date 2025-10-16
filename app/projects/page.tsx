@@ -2,6 +2,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import ScrollAnimation from '@/components/ScrollAnimations';
 
 export default function Projects() {
@@ -90,7 +91,7 @@ export default function Projects() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 dark:from-blue-500/30 dark:to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 dark:from-purple-500/30 dark:to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 dark:from-purple-500/30 dark:to-pink-500/30 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
         </div>
         
         <div className="relative max-w-6xl mx-auto px-6 text-center">
@@ -116,9 +117,11 @@ export default function Projects() {
                   
                   <div className="relative">
                     <div className="relative overflow-hidden">
-                      <img 
+                      <Image 
                         src={project.image}
                         alt={project.title}
+                        width={800}
+                        height={600}
                         className="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4">
@@ -178,7 +181,7 @@ export default function Projects() {
       <section className="py-28 bg-gradient-to-r from-slate-800 via-blue-800 to-cyan-800 dark:from-slate-900 dark:via-blue-900 dark:to-cyan-900 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400/20 dark:bg-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400/20 dark:bg-cyan-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400/20 dark:bg-cyan-500/30 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
         </div>
         
         <div className="relative max-w-5xl mx-auto px-6 text-center">
