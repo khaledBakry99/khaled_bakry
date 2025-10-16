@@ -71,14 +71,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/50 to-cyan-900/60 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40 dark:from-slate-900 dark:via-blue-900/50 dark:to-cyan-900/60 py-20">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Get In <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+              Get In <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">Touch</span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
             </p>
           </div>
@@ -87,8 +87,8 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <ScrollAnimation animation="slideLeft" delay={200}>
             <div className="space-y-8">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-                <h2 className="text-3xl font-bold text-white mb-8">Let's Connect</h2>
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">Let's Connect</h2>
                 
                 <div className="space-y-6">
                   <a href="mailto:khaled.bakry.1999@gmail.com" className="flex items-center group hover:bg-white/5 p-3 rounded-xl transition-all duration-300">
@@ -96,8 +96,8 @@ export default function Contact() {
                       <i className="ri-mail-line text-white text-xl"></i>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Email</h3>
-                      <p className="text-slate-300 group-hover:text-blue-400 transition-colors">khaled.bakry.1999@gmail.com</p>
+                      <h3 className="text-slate-900 dark:text-white font-semibold">Email</h3>
+                      <p className="text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">khaled.bakry.1999@gmail.com</p>
                     </div>
                   </a>
 
@@ -106,8 +106,8 @@ export default function Contact() {
                       <i className="ri-phone-line text-white text-xl"></i>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Phone</h3>
-                      <p className="text-slate-300 group-hover:text-green-400 transition-colors">+963 945 364 616</p>
+                      <h3 className="text-slate-900 dark:text-white font-semibold">Phone</h3>
+                      <p className="text-slate-700 dark:text-slate-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">+963 945 364 616</p>
                     </div>
                   </a>
 
@@ -116,8 +116,8 @@ export default function Contact() {
                       <i className="ri-map-pin-line text-white text-xl"></i>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Location</h3>
-                      <p className="text-slate-300">Damascus, Syria</p>
+                      <h3 className="text-slate-900 dark:text-white font-semibold">Location</h3>
+                      <p className="text-slate-700 dark:text-slate-300">Damascus, Syria</p>
                     </div>
                   </div>
 
@@ -126,39 +126,39 @@ export default function Contact() {
                       <i className="ri-github-line text-white text-xl"></i>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">GitHub</h3>
-                      <p className="text-slate-300 group-hover:text-gray-400 transition-colors">github.com/khaledBakry99</p>
+                      <h3 className="text-slate-900 dark:text-white font-semibold">GitHub</h3>
+                      <p className="text-slate-700 dark:text-slate-300 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors">github.com/khaledBakry99</p>
                     </div>
                   </a>
                 </div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-                <h3 className="text-2xl font-bold text-white mb-6">Why Work With Me?</h3>
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Why Work With Me?</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                       <i className="ri-check-line text-white text-sm"></i>
                     </div>
-                    <span className="text-slate-300">Clean, maintainable code with modern best practices</span>
+                    <span className="text-slate-700 dark:text-slate-300">Clean, maintainable code with modern best practices</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                       <i className="ri-check-line text-white text-sm"></i>
                     </div>
-                    <span className="text-slate-300">Responsive design that works on all devices</span>
+                    <span className="text-slate-700 dark:text-slate-300">Responsive design that works on all devices</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                       <i className="ri-check-line text-white text-sm"></i>
                     </div>
-                    <span className="text-slate-300">Fast delivery with attention to detail</span>
+                    <span className="text-slate-700 dark:text-slate-300">Fast delivery with attention to detail</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                       <i className="ri-check-line text-white text-sm"></i>
                     </div>
-                    <span className="text-slate-300">Ongoing support and maintenance</span>
+                    <span className="text-slate-700 dark:text-slate-300">Ongoing support and maintenance</span>
                   </div>
                 </div>
               </div>
@@ -166,12 +166,12 @@ export default function Contact() {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideRight" delay={400}>
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-              <h2 className="text-3xl font-bold text-white mb-8">Send Message</h2>
+            <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">Send Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6" data-readdy-form id="contact-form">
                 <div>
-                  <label htmlFor="name" className="block text-white font-semibold mb-2">
+                  <label htmlFor="name" className="block text-slate-900 dark:text-white font-semibold mb-2">
                     Full Name
                   </label>
                   <input
@@ -181,13 +181,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-blue-100/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/60 dark:bg-white/10 border border-blue-300/40 dark:border-blue-100/20 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-white font-semibold mb-2">
+                  <label htmlFor="email" className="block text-slate-900 dark:text-white font-semibold mb-2">
                     Email Address
                   </label>
                   <input
@@ -197,13 +197,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-blue-100/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/60 dark:bg-white/10 border border-blue-300/40 dark:border-blue-100/20 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     placeholder="Enter your email address"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-white font-semibold mb-2">
+                  <label htmlFor="subject" className="block text-slate-900 dark:text-white font-semibold mb-2">
                     Subject
                   </label>
                   <input
@@ -213,13 +213,13 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-blue-100/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/60 dark:bg-white/10 border border-blue-300/40 dark:border-blue-100/20 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     placeholder="What's this about?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-semibold mb-2">
+                  <label htmlFor="message" className="block text-slate-900 dark:text-white font-semibold mb-2">
                     Message
                   </label>
                   <textarea
@@ -230,10 +230,10 @@ export default function Contact() {
                     required
                     maxLength={500}
                     rows={6}
-                    className="w-full px-4 py-3 bg-white/10 border border-blue-100/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-white/60 dark:bg-white/10 border border-blue-300/40 dark:border-blue-100/20 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
                     placeholder="Tell me about your project..."
                   />
-                  <div className="text-right text-sm text-slate-400 mt-1">
+                  <div className="text-right text-sm text-slate-600 dark:text-slate-400 mt-1">
                     {formData.message.length}/500 characters
                   </div>
                 </div>
@@ -279,11 +279,11 @@ export default function Contact() {
         </div>
 
         <ScrollAnimation animation="fadeIn" delay={600}>
-          <div className="mt-16 text-center bg-white/5 backdrop-blur-xl rounded-2xl p-12 border border-blue-100/10">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Start Your <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Project?</span>
+          <div className="mt-16 text-center bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-12 border border-blue-200/30 dark:border-blue-100/10">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+              Ready to Start Your <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">Project?</span>
             </h2>
-            <p className="text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               Whether you need a new website, want to improve an existing one, or have a custom project in mind, 
               I'm here to help bring your vision to life with modern web technologies.
             </p>
@@ -297,7 +297,7 @@ export default function Contact() {
               </a>
               <a 
                 href="tel:+963945364616"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-all duration-300 border border-blue-100/20 hover:border-blue-100/40 hover:shadow-lg whitespace-nowrap"
+                className="inline-flex items-center px-8 py-4 bg-white/60 dark:bg-white/10 hover:bg-white/80 dark:hover:bg-white/20 text-slate-700 dark:text-white rounded-xl font-bold text-lg transition-all duration-300 border border-blue-300/40 dark:border-blue-100/20 hover:border-blue-400/60 dark:hover:border-blue-100/40 hover:shadow-lg whitespace-nowrap"
               >
                 <i className="ri-phone-line mr-3 text-xl"></i>
                 Call Me

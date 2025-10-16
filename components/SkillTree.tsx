@@ -134,7 +134,7 @@ export default function SkillTree() {
       name: 'Git & GitHub',
       level: 90,
       unlocked: true,
-      dependencies: [],
+      dependencies: ['js'],
       icon: 'ri-git-branch-line',
       category: 'Tools',
       description: 'Version Control, Collaboration',
@@ -145,7 +145,7 @@ export default function SkillTree() {
       name: 'VS Code',
       level: 95,
       unlocked: true,
-      dependencies: [],
+      dependencies: ['git'],
       icon: 'ri-code-line',
       category: 'Tools',
       description: 'Extensions, Shortcuts, Debugging',
@@ -168,10 +168,10 @@ export default function SkillTree() {
 
   // حساب الخطوط بين المهارات
   const getConnectionPath = (from: Skill, to: Skill) => {
-    const fromX = from.position.x * 150 + 60;
-    const fromY = from.position.y * 150 + 60;
-    const toX = to.position.x * 150 + 60;
-    const toY = to.position.y * 150 + 60;
+    const fromX = from.position.x * 150 + 100;
+    const fromY = from.position.y * 120 - 20 + 60;
+    const toX = to.position.x * 150 + 100;
+    const toY = to.position.y * 120 - 20 + 60;
 
     // منحنى بيزيه للخط
     const midY = (fromY + toY) / 2;
@@ -179,26 +179,26 @@ export default function SkillTree() {
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/30 to-purple-900/30 py-20 overflow-hidden">
+    <div className="relative w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-slate-900 dark:via-blue-900/30 dark:to-purple-900/30 py-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-400/10 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400/10 dark:bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 mb-4">
+          <h2 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600 dark:from-blue-400 dark:via-cyan-400 dark:to-purple-400 mb-4">
             🎮 Skill Tree
           </h2>
-          <p className="text-xl text-slate-300">
+          <p className="text-xl text-slate-700 dark:text-slate-300">
             Unlock and master technologies like an RPG game
           </p>
         </div>
 
         {/* Skill Tree Container */}
-        <div className="relative bg-slate-800/50 backdrop-blur-xl rounded-3xl p-12 border border-slate-700/50 shadow-2xl">
+        <div className="relative bg-white/80 dark:bg-slate-800/50 backdrop-blur-xl rounded-3xl p-12 pt-8 pb-24 border border-blue-200/30 dark:border-slate-700/50 shadow-2xl">
           {/* SVG for connections */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
             <defs>
@@ -232,7 +232,7 @@ export default function SkillTree() {
           </svg>
 
           {/* Skills Grid */}
-          <div className="relative" style={{ height: '1000px' }}>
+          <div className="relative" style={{ height: '750px', marginTop: '-80px' }}>
             {skills.map((skill) => {
               const radius = 44;
               const circumference = 2 * Math.PI * radius;
@@ -244,7 +244,7 @@ export default function SkillTree() {
                   className="absolute"
                   style={{
                     left: `${skill.position.x * 150}px`,
-                    top: `${skill.position.y * 150}px`,
+                    top: `${skill.position.y * 120 - 50}px`,
                     zIndex: hoveredSkill === skill.id ? 10 : 1,
                   }}
                   onMouseEnter={() => setHoveredSkill(skill.id)}
@@ -310,29 +310,29 @@ export default function SkillTree() {
 
                     {/* Skill Name */}
                     <div className="text-center mt-3">
-                      <h3 className="text-white font-bold text-sm">{skill.name}</h3>
-                      <p className="text-xs text-slate-400">{skill.category}</p>
+                      <h3 className="text-slate-900 dark:text-white font-bold text-sm">{skill.name}</h3>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">{skill.category}</p>
                     </div>
 
                     {/* Hover Tooltip */}
                     <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-4 transition-all duration-300 ${
                       hoveredSkill === skill.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                     }`}>
-                      <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-2xl whitespace-nowrap">
-                        <h4 className="text-white font-bold mb-1">{skill.name}</h4>
-                        <p className="text-slate-300 text-sm mb-2">{skill.description}</p>
+                      <div className="bg-white dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-xl p-4 shadow-2xl whitespace-nowrap">
+                        <h4 className="text-slate-900 dark:text-white font-bold mb-1">{skill.name}</h4>
+                        <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">{skill.description}</p>
                         <div className="flex items-center gap-2">
-                          <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
+                          <div className="flex-1 h-2 bg-slate-300 dark:bg-slate-700 rounded-full overflow-hidden">
                             <div 
                               className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000"
                               style={{ width: `${skill.level}%` }}
                             />
                           </div>
-                          <span className="text-blue-400 font-bold text-sm">{skill.level}%</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-bold text-sm">{skill.level}%</span>
                         </div>
                         {skill.dependencies.length > 0 && (
-                          <div className="mt-2 pt-2 border-t border-slate-700">
-                            <p className="text-xs text-slate-400">
+                          <div className="mt-2 pt-2 border-t border-slate-300 dark:border-slate-700">
+                            <p className="text-xs text-slate-600 dark:text-slate-400">
                               Requires: {skill.dependencies.map(dep => 
                                 skills.find(s => s.id === dep)?.name
                               ).join(', ')}
@@ -342,7 +342,7 @@ export default function SkillTree() {
                       </div>
                       {/* Arrow */}
                       <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1">
-                        <div className="w-3 h-3 bg-slate-800 border-r border-b border-slate-700 transform rotate-45" />
+                        <div className="w-3 h-3 bg-white dark:bg-slate-800 border-r border-b border-blue-200 dark:border-slate-700 transform rotate-45" />
                       </div>
                     </div>
                   </div>
@@ -358,33 +358,33 @@ export default function SkillTree() {
             <div className="text-4xl font-black text-blue-400 mb-2">
               {skills.filter(s => s.unlocked).length}
             </div>
-            <div className="text-slate-300 font-medium">Skills Unlocked</div>
+            <div className="text-slate-700 dark:text-slate-300 font-medium">Skills Unlocked</div>
           </div>
           
           <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-2xl p-6 border border-purple-500/30">
             <div className="text-4xl font-black text-purple-400 mb-2">
               {Math.round(skills.reduce((acc, s) => acc + s.level, 0) / skills.length)}%
             </div>
-            <div className="text-slate-300 font-medium">Average Mastery</div>
+            <div className="text-slate-700 dark:text-slate-300 font-medium">Average Mastery</div>
           </div>
           
           <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-xl rounded-2xl p-6 border border-emerald-500/30">
             <div className="text-4xl font-black text-emerald-400 mb-2">
               {new Set(skills.map(s => s.category)).size}
             </div>
-            <div className="text-slate-300 font-medium">Categories</div>
+            <div className="text-slate-700 dark:text-slate-300 font-medium">Categories</div>
           </div>
           
           <div className="bg-gradient-to-br from-orange-500/20 to-amber-500/20 backdrop-blur-xl rounded-2xl p-6 border border-orange-500/30">
             <div className="text-4xl font-black text-orange-400 mb-2">
               {skills.filter(s => s.level >= 90).length}
             </div>
-            <div className="text-slate-300 font-medium">Expert Level</div>
+            <div className="text-slate-700 dark:text-slate-300 font-medium">Expert Level</div>
           </div>
         </div>
 
         {/* Legend */}
-        <div className="mt-8 flex justify-center gap-8 text-sm text-slate-400">
+        <div className="mt-8 flex justify-center gap-8 text-sm text-slate-600 dark:text-slate-400">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
             <span>Unlocked & Mastered</span>

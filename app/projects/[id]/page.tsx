@@ -197,10 +197,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/50 to-cyan-900/60 py-20 flex items-center justify-center">
-        <div className="text-center bg-white/5 backdrop-blur-xl rounded-2xl p-12 border border-blue-100/10">
-          <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
-          <Link href="/projects" className="text-blue-400 hover:text-blue-300">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40 dark:from-slate-900 dark:via-blue-900/50 dark:to-cyan-900/60 py-20 flex items-center justify-center">
+        <div className="text-center bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-12 border border-blue-200/30 dark:border-blue-100/10">
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Project Not Found</h1>
+          <Link href="/projects" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
             ← Back to Projects
           </Link>
         </div>
@@ -209,22 +209,22 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/50 to-cyan-900/60 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40 dark:from-slate-900 dark:via-blue-900/50 dark:to-cyan-900/60 py-20">
       <div className="max-w-5xl mx-auto px-6">
         <ScrollAnimation animation="fadeIn">
           <div className="mb-8">
             <Link 
               href="/projects"
-              className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 bg-white/5 backdrop-blur-xl px-4 py-2 rounded-lg transition-all duration-300 border border-blue-100/10"
+              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-8 bg-white/60 dark:bg-white/5 backdrop-blur-xl px-4 py-2 rounded-lg transition-all duration-300 border border-blue-300/40 dark:border-blue-100/10"
             >
               <i className="ri-arrow-left-line mr-2"></i>
               Back to Projects
             </Link>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
               {project.title}
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed max-w-4xl">
+            <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-4xl">
               {project.description}
             </p>
           </div>
@@ -239,36 +239,36 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2 space-y-8">
             <ScrollAnimation animation="slideLeft" delay={300}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
                     <i className="ri-question-line text-white"></i>
                   </div>
                   The Problem
                 </h2>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                   {project.problem}
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideLeft" delay={400}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mr-4">
                     <i className="ri-lightbulb-line text-white"></i>
                   </div>
                   The Solution
                 </h2>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                   {project.solution}
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideLeft" delay={500}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4">
                     <i className="ri-tools-line text-white"></i>
                   </div>
@@ -280,7 +280,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                       <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                         <i className="ri-arrow-right-s-line text-white text-sm"></i>
                       </div>
-                      <span className="text-slate-300">{challenge}</span>
+                      <span className="text-slate-700 dark:text-slate-300">{challenge}</span>
                     </li>
                   ))}
                 </ul>
@@ -288,8 +288,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideLeft" delay={600}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-100/10">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-blue-200/30 dark:border-blue-100/10">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
                     <i className="ri-book-line text-white"></i>
                   </div>
@@ -301,7 +301,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                       <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                         <i className="ri-check-line text-white text-sm"></i>
                       </div>
-                      <span className="text-slate-300">{lesson}</span>
+                      <span className="text-slate-700 dark:text-slate-300">{lesson}</span>
                     </li>
                   ))}
                 </ul>
@@ -311,8 +311,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
 
           <div className="space-y-6">
             <ScrollAnimation animation="slideRight" delay={300}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-blue-100/10">
-                <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-blue-200/30 dark:border-blue-100/10">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-3">
                     <i className="ri-code-line text-white text-sm"></i>
                   </div>
@@ -322,7 +322,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                   {project.techStack.map((tech, index) => (
                     <div key={index} className="flex items-center">
                       <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></div>
-                      <span className="text-slate-300 font-medium">{tech}</span>
+                      <span className="text-slate-700 dark:text-slate-300 font-medium">{tech}</span>
                     </div>
                   ))}
                 </div>
@@ -330,8 +330,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideRight" delay={400}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-blue-100/10">
-                <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-blue-200/30 dark:border-blue-100/10">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                   <div className="w-8 h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mr-3">
                     <i className="ri-star-line text-white text-sm"></i>
                   </div>
@@ -341,7 +341,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                   {project.features.map((feature, index) => (
                     <div key={index} className="flex items-center">
                       <i className="ri-star-fill text-yellow-500 mr-3 text-sm"></i>
-                      <span className="text-slate-300 text-sm">{feature}</span>
+                      <span className="text-slate-700 dark:text-slate-300 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -351,11 +351,11 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
         </div>
 
         <ScrollAnimation animation="fadeIn" delay={700}>
-          <div className="text-center bg-white/5 backdrop-blur-xl rounded-2xl p-12 border border-blue-100/10">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Interested in <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Similar Work?</span>
+          <div className="text-center bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-12 border border-blue-200/30 dark:border-blue-100/10">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+              Interested in <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">Similar Work?</span>
             </h2>
-            <p className="text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               Let's discuss how I can help bring your project ideas to life with cutting-edge technology and innovative solutions
             </p>
             <Link 

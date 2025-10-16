@@ -7,11 +7,11 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative py-32 overflow-hidden">
       {/* Animated Background with Mesh Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         {/* Animated Gradient Orbs */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse animation-delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse animation-delay-2000" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 to-cyan-400/20 dark:from-blue-500/30 dark:to-cyan-500/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-400/20 to-pink-400/20 dark:from-purple-500/30 dark:to-pink-500/30 rounded-full blur-3xl animate-pulse animation-delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-emerald-400/15 to-teal-400/15 dark:from-emerald-500/20 dark:to-teal-500/20 rounded-full blur-3xl animate-pulse animation-delay-2000" />
         
         {/* Grid Pattern Overlay */}
         <div className="absolute inset-0 opacity-10 grid-pattern" />
@@ -24,10 +24,10 @@ export default function ContactSection() {
             {/* Animated Border Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-[3rem] opacity-75 group-hover:opacity-100 blur-xl transition-opacity duration-700 animate-gradient-x" />
             
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 dark:from-white/5 dark:to-white/0 backdrop-blur-2xl rounded-[2rem] border border-white/20 dark:border-white/10 p-8 md:p-12 overflow-hidden">
+            <div className="relative bg-gradient-to-br from-white/90 to-white/80 dark:from-white/10 dark:to-white/5 backdrop-blur-2xl rounded-[2rem] border border-blue-200/40 dark:border-white/20 p-8 md:p-12 overflow-hidden">
               {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-full blur-3xl" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-400/15 to-purple-400/15 dark:from-blue-500/20 dark:to-purple-500/20 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-emerald-400/15 to-cyan-400/15 dark:from-emerald-500/20 dark:to-cyan-500/20 rounded-full blur-3xl" />
               
               {/* Content */}
               <div className="relative text-center">
@@ -46,10 +46,10 @@ export default function ContactSection() {
                 {/* Heading */}
                 <ScrollAnimation animation="slideUp" delay={300}>
                   <h2 className="text-3xl md:text-5xl font-black mb-4 relative inline-block">
-                    <span className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 blur-2xl opacity-50 animate-pulse">
+                    <span className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 blur-2xl opacity-50 animate-pulse">
                       Ready to Build Something Amazing?
                     </span>
-                    <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient-x">
+                    <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 animate-gradient-x">
                       Ready to Build Something Amazing?
                     </span>
                   </h2>
@@ -57,7 +57,7 @@ export default function ContactSection() {
 
                 {/* Description */}
                 <ScrollAnimation animation="fadeIn" delay={400}>
-                  <p className="text-base md:text-lg text-blue-200 dark:text-blue-300 mb-8 leading-relaxed max-w-2xl mx-auto font-medium">
+                  <p className="text-base md:text-lg text-slate-700 dark:text-blue-200 mb-8 leading-relaxed max-w-2xl mx-auto font-medium">
                     Let&apos;s collaborate and bring your vision to life with cutting‑edge technology
                   </p>
                 </ScrollAnimation>
@@ -129,19 +129,19 @@ export default function ContactSection() {
                 {/* Social Links */}
                 <ScrollAnimation animation="fadeIn" delay={600}>
                   <div className="mt-12 flex items-center justify-center gap-6">
-                    <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/30" />
+                    <div className="h-px w-16 bg-gradient-to-r from-transparent to-slate-400/30 dark:to-white/30" />
                     <div className="flex gap-4">
-                      <a href="https://github.com/khaledBakry99" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300">
+                      <a href="https://github.com/khaledBakry99" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/60 dark:bg-white/10 backdrop-blur-lg border border-blue-300/40 dark:border-white/20 flex items-center justify-center text-slate-700 dark:text-white hover:bg-white/80 dark:hover:bg-white/20 hover:scale-110 transition-all duration-300">
                         <i className="ri-github-fill text-xl" />
                       </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300">
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/60 dark:bg-white/10 backdrop-blur-lg border border-blue-300/40 dark:border-white/20 flex items-center justify-center text-slate-700 dark:text-white hover:bg-white/80 dark:hover:bg-white/20 hover:scale-110 transition-all duration-300">
                         <i className="ri-linkedin-fill text-xl" />
                       </a>
-                      <a href="mailto:khaled.bakry.1999@gmail.com" className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300">
+                      <a href="mailto:khaled.bakry.1999@gmail.com" className="w-12 h-12 rounded-xl bg-white/60 dark:bg-white/10 backdrop-blur-lg border border-blue-300/40 dark:border-white/20 flex items-center justify-center text-slate-700 dark:text-white hover:bg-white/80 dark:hover:bg-white/20 hover:scale-110 transition-all duration-300">
                         <i className="ri-mail-fill text-xl" />
                       </a>
                     </div>
-                    <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/30" />
+                    <div className="h-px w-16 bg-gradient-to-l from-transparent to-slate-400/30 dark:to-white/30" />
                   </div>
                 </ScrollAnimation>
               </div>

@@ -178,7 +178,7 @@ export default function Projects() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-28 bg-gradient-to-r from-slate-800 via-blue-800 to-cyan-800 dark:from-slate-900 dark:via-blue-900 dark:to-cyan-900 text-white relative overflow-hidden">
+      <section className="py-28 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 dark:from-slate-800 dark:via-blue-800 dark:to-cyan-800 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400/20 dark:bg-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400/20 dark:bg-cyan-500/30 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
@@ -186,10 +186,10 @@ export default function Projects() {
         
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-5xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-300 to-cyan-300 dark:from-white dark:via-blue-400 dark:to-cyan-400">
+            <h2 className="text-5xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-slate-700 via-blue-600 to-cyan-600 dark:from-white dark:via-blue-300 dark:to-cyan-300">
               Interested in Working Together?
             </h2>
-            <p className="text-xl text-blue-200 dark:text-blue-300 mb-12 leading-relaxed">
+            <p className="text-xl text-slate-700 dark:text-blue-200 mb-12 leading-relaxed">
               Let&apos;s discuss your next project and bring your ideas to life
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -204,7 +204,7 @@ export default function Projects() {
                 href="https://github.com/khaledBakry99"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center px-10 py-4 bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 text-white rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 backdrop-blur-lg border border-white/20 dark:border-white/10 hover:border-white/30 dark:hover:border-white/20 whitespace-nowrap"
+                className="group relative inline-flex items-center px-10 py-4 bg-slate-700/90 hover:bg-slate-800 dark:bg-white/10 dark:hover:bg-white/20 text-white rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 backdrop-blur-lg border border-slate-600 dark:border-white/20 hover:border-slate-700 dark:hover:border-white/30 whitespace-nowrap"
               >
                 <i className="ri-github-line mr-3 text-xl"></i>
                 View GitHub
