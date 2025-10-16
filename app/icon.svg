@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="64" height="64" rx="14" fill="url(#gradient)"/>
+  
+  <!-- Subtle glow effect -->
+  <rect width="64" height="64" rx="14" fill="url(#glow)" opacity="0.3"/>
+  
+  <!-- KB Text with better positioning -->
+  <text x="32" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">KB</text>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+</svg>
