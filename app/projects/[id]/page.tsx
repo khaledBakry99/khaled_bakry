@@ -4,6 +4,55 @@ import ScrollAnimation from '@/components/ScrollAnimations';
 import ImageGallery from '@/components/ImageGallery';
 
 const projectsData = {
+  5: {
+    title: "Syria Express - Shipping & Delivery Management Platform",
+    description: "Modern web application for managing shipping and delivery services within Syria, connecting senders, receivers, and shipping companies through an intuitive digital platform.",
+    problem: "Finding reliable shipping services between Syrian cities was challenging. Customers faced difficulties tracking shipments, comparing prices, and managing multiple deliveries. Traditional methods lacked transparency and real-time updates.",
+    solution: "Developed Syria Express, a comprehensive shipping management platform with multi-step shipment creation, real-time tracking system, intelligent price calculator, and interactive branch map covering 13 Syrian cities. Built complete user dashboard with shipment management, saved addresses, payment history, and customizable settings including dark mode support.",
+    techStack: ["React.js", "Vite", "TailwindCSS", "Redux Toolkit", "React Router", "React Hook Form", "Axios", "React Icons"],
+    challenges: [
+      "Implementing complex multi-step form with data persistence across steps",
+      "Creating real-time shipment tracking with timeline visualization",
+      "Building intelligent price calculator with multiple variables",
+      "Designing responsive dashboard with comprehensive features",
+      "Implementing seamless dark/light mode with local storage persistence"
+    ],
+    lessons: [
+      "Importance of user experience in multi-step forms",
+      "Effective state management with Redux Toolkit for complex applications",
+      "Value of Vite for fast development and optimized production builds",
+      "Power of React Hook Form for efficient form validation and management"
+    ],
+    features: [
+      "5-step shipment creation wizard (sender, receiver, details, options, review)",
+      "Real-time tracking with detailed timeline and status updates",
+      "Smart price calculator based on weight, distance, and delivery type",
+      "Interactive branch map with 13 Syrian cities",
+      "Comprehensive dashboard (statistics, shipments, profile, addresses, payments, settings)",
+      "Dark/Light mode with smooth transitions",
+      "Fully responsive design for all devices",
+      "Authentication system with login and registration"
+    ],
+    images: [
+      "/images/Syria Express/1.png",
+      "/images/Syria Express/2.png",
+      "/images/Syria Express/3.png",
+      "/images/Syria Express/4.png",
+      "/images/Syria Express/5.png",
+      "/images/Syria Express/6.png",
+      "/images/Syria Express/7.png",
+      "/images/Syria Express/8.png",
+      "/images/Syria Express/9.png",
+      "/images/Syria Express/10.png",
+      "/images/Syria Express/11.png",
+      "/images/Syria Express/12.png",
+      "/images/Syria Express/13.png",
+      "/images/Syria Express/14.png",
+      "/images/Syria Express/15.png",
+      "/images/Syria Express/16.png",
+      "/images/Syria Express/17.png"
+    ]
+  },
   1: {
     title: "Project Management System",
     description: "Academic project management dashboard for universities with comprehensive features for managing students, supervisors, and academic projects.",
@@ -188,6 +237,7 @@ export async function generateStaticParams() {
     { id: '2' },
     { id: '3' },
     { id: '4' },
+    { id: '5' },
   ];
 }
 

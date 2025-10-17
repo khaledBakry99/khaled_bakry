@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import ScrollAnimation from '@/components/ScrollAnimations';
+import SyriaExpressProjectCard from '@/components/projects/SyriaExpressProjectCard';
 import AcademicProjectCard from '@/components/projects/AcademicProjectCard';
 import CinemaProjectCard from '@/components/projects/CinemaProjectCard';
 import JobScopeProjectCard from '@/components/projects/JobScopeProjectCard';
@@ -27,9 +28,9 @@ export default function ProjectsSection() {
         </ScrollAnimation>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          {/* Project 1 - Academic */}
+          {/* Project 1 - Syria Express */}
           <ScrollAnimation animation="slideLeft" delay={200}>
-            <AcademicProjectCard />
+            <SyriaExpressProjectCard />
           </ScrollAnimation>
 
           {/* Project 2 - Cinema */}
@@ -42,9 +43,9 @@ export default function ProjectsSection() {
             <JobScopeProjectCard />
           </ScrollAnimation>
 
-          {/* Project 4 - Black Movie */}
+          {/* Project 4 - Academic */}
           <ScrollAnimation animation="slideRight" delay={800}>
-            <BlackMovieProjectCard />
+            <AcademicProjectCard />
           </ScrollAnimation>
         </div>
 

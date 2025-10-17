@@ -200,7 +200,19 @@ export default function CV() {
 
                 <div className="print-avoid-break">
                   <h4 className="text-lg font-bold text-slate-900 dark:text-white print:text-black mb-1">
-                    4. Black Movie Website
+                    4. Syria Express - Shipping & Delivery Management Platform
+                  </h4>
+                  <p className="text-sm text-blue-600 dark:text-blue-400 print:text-black mb-2 italic">
+                    (React.js, TailwindCSS, Redux Toolkit, React Router)
+                  </p>
+                  <p className="text-slate-700 dark:text-slate-300 print:text-black text-sm leading-relaxed">
+                    Developed a comprehensive web-based shipping and delivery management platform for Syria, connecting senders, recipients, and shipping companies through an intuitive digital interface. 5-stage order system (sender, recipient, shipment, delivery, review) with drag-and-drop uploads, real-time pricing, and support for 13 Syrian cities. Implemented real-time shipment tracking with detailed timeline visualization, comprehensive dashboard for users to manage shipments, saved addresses, payment history, and account settings with protected routes using JWT authentication. Responsive UI with dark/light mode, smooth animations, and reusable components (Button, Card, Input, Badge, Alert).
+                  </p>
+                </div>
+
+                <div className="print-avoid-break">
+                  <h4 className="text-lg font-bold text-slate-900 dark:text-white print:text-black mb-1">
+                    5. Black Movie Website
                   </h4>
                   <p className="text-sm text-blue-600 dark:text-blue-400 print:text-black mb-2 italic">
                     (HTML - CSS)

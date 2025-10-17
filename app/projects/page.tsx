@@ -8,6 +8,25 @@ import ScrollAnimation from '@/components/ScrollAnimations';
 export default function Projects() {
   const projects = [
     {
+      id: 5,
+      title: "Syria Express - Shipping & Delivery Management",
+      description: "Modern shipping and delivery management platform connecting senders, receivers, and shipping companies across Syria with real-time tracking.",
+      longDescription: "A comprehensive web application for managing shipping and delivery services within Syria, featuring multi-step shipment creation, real-time tracking, price calculator, and complete dashboard for users.",
+      image: "/images/Syria Express/1.png",
+      technologies: ["React.js", "Vite", "TailwindCSS", "Redux Toolkit", "React Router", "React Hook Form"],
+      category: "Web Application",
+      year: "2025",
+      status: "Completed",
+      features: [
+        "Multi-step shipment creation form",
+        "Real-time shipment tracking system",
+        "Intelligent price calculator",
+        "Interactive branch map (13 Syrian cities)",
+        "Comprehensive user dashboard",
+        "Dark/Light mode support"
+      ]
+    },
+    {
       id: 4,
       title: "Cinema Management & Booking System",
       description: "Complete cinema platform with seat selection, hall management, and comprehensive booking system for theaters.",
